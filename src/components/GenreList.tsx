@@ -18,8 +18,8 @@ interface Props {
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
 
+// no longer in use. all the genre list data are stored staticallly
   if (error) return null;
-
   if (isLoading) return <Spinner />;
 
   return (
